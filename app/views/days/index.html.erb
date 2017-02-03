@@ -8,7 +8,7 @@
   <tbody>
     <% @days.each do |day| %>
       <tr>
-        <td><%= day.day %></td>
+        <td><%= link_to(day.day, day) %></td>
         <td><%= day.balance %></td>
         <td><%= link_to 'Delete', day, method: :delete %></td>
       </tr>

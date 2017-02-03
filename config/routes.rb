@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :days, only: [:index, :new, :create, :destroy]
+  get 'activities/new'
+
+  resources :days, except: [:edit] do
+    resources :activities, only: [:create, :destroy], shallow: true
+  end
+
   root to: 'days#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -3,6 +3,12 @@ class DaysController < ApplicationController
     @days = Day.all.order(day: :desc).limit(25)
   end
 
+  def show
+    @day = Day.find(params[:id])
+    @new_activity = @day.activities.build
+    @activities = @day.activities
+  end
+
   def new
     @day = Day.new
   end
