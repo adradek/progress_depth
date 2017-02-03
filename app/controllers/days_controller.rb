@@ -1,6 +1,6 @@
 class DaysController < ApplicationController
   def index
-    @days = Day.all
+    @days = Day.all.order(day: :desc).limit(25)
   end
 
   def new
@@ -9,7 +9,6 @@ class DaysController < ApplicationController
 
   def create
     @day = Day.new(day_params)
-
     if @day.save
       redirect_to root_url
     else
