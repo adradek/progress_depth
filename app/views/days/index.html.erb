@@ -1,0 +1,18 @@
+<h1>Days#index</h1>
+<table>
+  <thead>
+    <th>Day</th>
+    <th>Balance</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @days.each do |day| %>
+      <tr>
+        <td><%= day.day %></td>
+        <td><%= day.balance %></td>
+        <td><%= link_to 'Delete', day, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New day', new_day_path %>
