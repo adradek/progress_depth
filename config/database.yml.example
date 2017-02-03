@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+
+development:
+  <<: *default
+  database: progress_depth
+
+
+test:
+  <<: *default
+  database: progress_depth_test
+
+
+production:
+  <<: *default
+  database: progress_depth_production
+  username: progress_depth
+  password: <%= ENV['PROGRESS_DEPTH_DATABASE_PASSWORD'] %>
