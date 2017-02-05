@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h4>Overall</h4>
+      <p><%= @total_balance %></p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h4>Today: <%= @today %></h4>
+      <p><%= @today.balance %></p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <section class="col-md-12">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <%= form_for [@today, @today.activities.build], class: 'form-inline' do |f| %>
+              <%= f.text_field :title, placeholder: 'Title' %>
+              <%= f.text_field :description, placeholder: 'Description' %>
+              <%= f.text_field :value, placeholder: 'Value', value: 2 %>
+              <%= f.submit 'Add activity' %>
+            <% end %>
+            <table class="table">
+              <thead>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Value</th>
+                <th></th>
+              </thead>
+              <tbody>
+                <% @activities.each do |activity| %>
+                  <% next unless activity.id %>
+                  <tr>
+                    <td><%= activity.title %></td>
+                    <td><%= activity.description %></td>
+                    <td><%= activity.value %></td>
+                    <td><%= link_to 'Delete', activity, method: :delete %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="row">
+  <section class="col-md-3">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <%= link_to days_path do %>
+          <h3 class="panel-title">Recent days</h3>
+        <% end %>
+      </div>
+      <div class="panel-body">
+        <table class="table table-hover">
+          <thead>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody>
+            <% @decade.each do |day| %>
+              <tr>
+                <td><%= link_to day, day %></td>
+                <td><%= day.balance %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="col-md-9">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title">Graph</h3>
+      </div>
+      <div class="panel-body">
+      </div>
+    </div>
+  </section>
+</div>

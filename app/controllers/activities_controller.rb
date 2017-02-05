@@ -4,7 +4,7 @@ class ActivitiesController < ApplicationController
     @new_activity = @day.activities.build(activity_params)
 
     if @new_activity.save
-      redirect_to @day
+      redirect_to :back #@day
     else
       @activities = @day.activities
       render template: 'days/show'
@@ -14,7 +14,7 @@ class ActivitiesController < ApplicationController
   def destroy
     activity = Activity.find(params[:id])
     activity.destroy
-    redirect_to day_url(activity.day_id)
+    redirect_to :back #day_url(activity.day_id)
   end
 
   private

@@ -16,7 +16,7 @@ class DaysController < ApplicationController
   def create
     @day = Day.new(day_params)
     if @day.save
-      redirect_to root_url
+      redirect_to days_url
     else
       render :new
     end
@@ -24,7 +24,7 @@ class DaysController < ApplicationController
 
   def destroy
     Day.find(params[:id]).destroy
-    redirect_to root_url
+    redirect_to days_url
   end
 
   private

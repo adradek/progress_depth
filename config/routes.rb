@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'activities/new'
+  get 'dashboard/index'
 
   resources :days, except: [:edit] do
     resources :activities, only: [:create, :destroy], shallow: true
   end
 
-  root to: 'days#index'
+  root to: 'dashboard#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
