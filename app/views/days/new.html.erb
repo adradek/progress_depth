@@ -1,6 +1,6 @@
 <h1>New day</h1>
 <%= form_for @day do |f| %>
-  <%= f.date_field :day, value: Date.today %>
+  <%= f.date_field :day, value: Date.today, autofocus: true %>
   <%= f.text_field :balance %>
   <%= f.submit %>
 <% end %>
