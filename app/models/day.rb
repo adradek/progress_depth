@@ -17,7 +17,7 @@ class Day < ActiveRecord::Base
 
   # Free of fines days are saturday and sunday
   def free?
-    day.wday.in? [6, 7]
+    day.wday.in? [0, 6]
   end
 
   private
