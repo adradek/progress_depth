@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: days
+#
+#  id         :integer          not null, primary key
+#  day        :date             not null
+#  balance    :integer          default(0), not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Day < ActiveRecord::Base
   has_many :activities
 
