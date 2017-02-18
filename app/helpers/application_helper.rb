@@ -8,7 +8,7 @@ module ApplicationHelper
     # Make all links to open in new tab
     result = pipeline.call(content)[:output]
     result.xpath('.//a').each do |link|
-      link[:target] = 'blank'
+      link[:target] = '_blank'
     end
 
     result.to_s.html_safe
