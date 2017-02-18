@@ -36,8 +36,8 @@
                 <% @activities.each do |activity| %>
                   <% next unless activity.id %>
                   <tr>
-                    <td><%= activity.title %></td>
-                    <td><%= activity.description %></td>
+                    <td><%= markdownify activity.title %></td>
+                    <td><%= markdownify activity.description %></td>
                     <td><%= activity.value %></td>
                     <td><%= link_to 'Delete', activity, method: :delete %></td>
                   </tr>
