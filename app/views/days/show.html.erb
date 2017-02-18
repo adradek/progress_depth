@@ -23,13 +23,8 @@
       <% @activities.each do |activity| %>
         <% next unless activity.id %>
         <tr>
-          <% if activity.title =~ /<.+>/ and activity.description =~ /https?:/ %>
-            <td><%= link_to activity.title.delete('<>'), activity.description, target: 'blank' %></td>
-            <td></td>
-          <% else %>
-            <td><%= activity.title %></td>
-            <td><%= activity.description %></td>
-          <% end %>
+          <td><%= activity.title %></td>
+          <td><%= activity.description %></td>
           <td><%= activity.value %></td>
           <td><%= link_to 'Delete', activity, method: :delete %></td>
         </tr>
