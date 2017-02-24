@@ -24,7 +24,6 @@ gem 'html-pipeline'
 gem 'github-markdown'
 gem 'sanitize'
 
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -37,6 +36,7 @@ end
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
