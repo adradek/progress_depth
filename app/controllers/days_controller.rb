@@ -6,7 +6,7 @@ class DaysController < ApplicationController
   def show
     @day = Day.find(params[:id])
     @new_activity = @day.activities.build
-    @activities = @day.activities
+    @activities = @day.activities.order(:id)
   end
 
   def new
