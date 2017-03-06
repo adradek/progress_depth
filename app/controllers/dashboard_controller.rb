@@ -8,4 +8,9 @@ class DashboardController < ApplicationController
     # Last days
     @decade = Day.order(day: :desc).limit(10)
   end
+
+  def search
+    query       = "%" << params[:searchline].mb_chars.downcase.to_s << "%"
+    @activities = Activity.where('lower(title) like :q OR lower(description) like :q', q: query)
+  end
 end

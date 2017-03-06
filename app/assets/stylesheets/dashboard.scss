@@ -6,3 +6,25 @@ td > p {
   margin:  0;
   padding: 0;
 }
+
+#search-form {
+  margin-bottom: 20px;
+}
+
+.stylish-input-group {
+
+  .input-group-addon {
+    background: white !important;
+  }
+
+  .form-control {
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+  }
+
+  button {
+    border:0;
+    background:transparent;
+  }
+}

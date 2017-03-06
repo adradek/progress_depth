@@ -1,0 +1,14 @@
+<div class="row" id="search-form">
+  <div class="col-md-12">
+    <%= form_tag search_path, method: :get do |f| %>
+      <div class="input-group stylish-input-group">
+        <%= text_field_tag :searchline, nil, class: 'form-control', placeholder: 'Search' %>
+        <span class="input-group-addon">
+          <button type="submit">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    <% end %>
+  </div>
+</div>

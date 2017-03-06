@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post 'sign_in', to: 'sessions#create'
 
   get 'dashboard/index'
+  get 'search', to: 'dashboard#search', as: :search
 
   resources :days, except: [:edit] do
     resources :activities, only: [:create, :destroy], shallow: true
