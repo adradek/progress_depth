@@ -12,7 +12,7 @@
       <tr>
         <td><%= markdownify activity.title %></td>
         <td><%= markdownify activity.description %></td>
-        <td><%= link_to 'day', day_path(activity.day_id), target: '_blank' %></td>
+        <td><%= link_to activity.day, day_path(activity.day), target: '_blank' %></td>
       </tr>
     <% end %>
   </tbody>

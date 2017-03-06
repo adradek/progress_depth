@@ -12,5 +12,6 @@ class DashboardController < ApplicationController
   def search
     query       = "%" << params[:searchline].mb_chars.downcase.to_s << "%"
     @activities = Activity.where('lower(title) like :q OR lower(description) like :q', q: query)
+                          .includes(:day).order(:day_id, :id)
   end
 end
