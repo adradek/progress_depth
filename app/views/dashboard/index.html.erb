@@ -69,7 +69,7 @@
           </thead>
           <tbody>
             <% @decade.each do |day| %>
-              <tr>
+              <tr class="<%= "active" if day.free? %>">
                 <td><%= link_to day, day %></td>
                 <td><%= day.balance %></td>
               </tr>
