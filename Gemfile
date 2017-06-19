@@ -46,4 +46,3 @@ group :development do
   gem 'annotate', '~> 2.7'
   gem 'pry'
 end
-
