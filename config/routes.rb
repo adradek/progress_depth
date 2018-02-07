@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :activities, only: [:create, :destroy], shallow: true
   end
 
+  get 'charts/overall_progress', to: 'charts#overall_progress'
+
   root to: 'dashboard#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

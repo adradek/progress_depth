@@ -29,6 +29,8 @@ gem 'sanitize'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'money-rails'
+gem 'chartkick'
 
 group :production do
   gem 'rails_12factor'
