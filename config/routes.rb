@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   get 'charts/overall_progress', to: 'charts#overall_progress'
+  get 'charts/last', to: 'charts#last'
 
   root to: 'dashboard#index'
 
