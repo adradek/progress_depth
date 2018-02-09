@@ -12,9 +12,15 @@ class ChartsController < ApplicationController
   private
 
   def day_data(from: nil)
-    sum = 100
+    if from
+      sum = 100 + Day.where('day <= ?', from).sum(:balance)
+      days = Day.where('day > ?', from).order(:day)
+    else
+      sum = 100
+      days = Day.order(:day)
+    end
+
     result = []
-    days = from ? Day.where('day > ?', from).order(:day) : Day.order(:day)
     days.each { |day| result << [day.day.to_s, sum += day.balance] }
     result
   end
