@@ -62,6 +62,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonmarker (0.17.8)
+      ruby-enum (~> 0.5)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     debug_inspector (0.0.3)
@@ -170,6 +172,8 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    ruby-enum (0.7.2)
+      i18n
     sanitize (4.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
@@ -219,6 +223,7 @@ DEPENDENCIES
   byebug
   chartkick
   coffee-rails (~> 4.1.0)
+  commonmarker
   figaro
   github-markdown
   html-pipeline

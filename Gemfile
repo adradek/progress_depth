@@ -21,6 +21,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 gem 'html-pipeline'
+gem 'commonmarker'
 gem 'github-markdown'
 gem 'sanitize'
 
