@@ -1,0 +1,39 @@
+<!-- Modal! -->
+<div class="modal fade" id="upwork_money_modal_form" tabindex="-1" role="dialog" aria-labelledby="account-formLabel">
+
+
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="account-formLabel">Помогу 😖</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <%= label_tag :upwork_hours, "Часы" %>
+            <%= text_field_tag :upwork_hours, "", class: "form-control", placeholder: "Часы" %>
+          </div>
+          <div class="col-sm-3">
+            <%= label_tag :upwork_hours, "Минуты" %>
+            <%= text_field_tag :upwork_minutes, "0", class: "form-control", placeholder: "Минуты" %>
+          </div>
+          <div class="col-sm-3">
+            <%= label_tag :upwork_hours, "Ставка" %>
+            <%= text_field_tag :upwork_rate, ENV['my_current_rate'], class: "form-control" %>
+          </div>
+          <div class="col-sm-3">
+            <%= label_tag :upwork_hours, "Кэф" %>
+            <%= text_field_tag :upwork_my, ENV['my_portion'], class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="write_money" class='btn btn-primary btn-inline' "data-process_on_submit"='true' >
+          $0
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

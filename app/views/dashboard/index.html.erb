@@ -25,7 +25,11 @@
               <%= f.text_field :title, placeholder: 'Title' %>
               <%= f.text_field :description, placeholder: 'Description' %>
               <%= f.text_field :value, placeholder: 'Value', value: 2 %>
-              <%= f.submit 'Add activity' %>
+              <%= f.submit 'Add activity', class: "btn btn-default btn-sm" %>
+
+              <a class="btn btn-info btn-sm" data-toggle="modal" data-target="#upwork_money_modal_form">
+                Бабки дня
+              </a>
             <% end %>
             <table class="table">
               <thead>
@@ -93,3 +97,5 @@
     </div>
   </section>
 </div>
+
+<%= render 'activities/upwork_money_modal_form' %>
