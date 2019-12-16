@@ -4,6 +4,7 @@
   <thead>
     <th>Title</th>
     <th>Description</th>
+    <th>Score</th>
     <th>Day</th>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
       <tr>
         <td><%= markdownify activity.title %></td>
         <td><%= markdownify activity.description %></td>
+        <td><%= activity.value %></td>
         <td><%= link_to activity.day, day_path(activity.day), target: '_blank' %></td>
       </tr>
     <% end %>
