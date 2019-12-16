@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.2.5'
+ruby '2.4.9'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.11.1'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4.1'
@@ -24,6 +24,7 @@ gem 'html-pipeline'
 gem 'commonmarker'
 gem 'github-markdown'
 gem 'sanitize'
+# gem 'nokogiri', '>= 1.10.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
