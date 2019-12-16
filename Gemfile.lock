@@ -174,7 +174,7 @@ GEM
     rspec-support (3.7.1)
     ruby-enum (0.7.2)
       i18n
-    sanitize (4.6.0)
+    sanitize (4.6.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4)
