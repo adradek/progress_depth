@@ -1,4 +1,4 @@
-FROM ruby:2.4.9
+FROM ruby:2.5.8
 LABEL maintainer="alex.kochurov@gmail.com"
 
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
