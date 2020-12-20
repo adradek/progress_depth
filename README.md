@@ -5,3 +5,5 @@
 ## Information
 
 App for logging daily progress
+
+## Updating the Heroku stack
