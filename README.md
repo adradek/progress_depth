@@ -6,4 +6,4 @@
 
 App for logging daily progress
 
-## Updating the Heroku stack
+## Updating the Heroku stack to heroku-18
